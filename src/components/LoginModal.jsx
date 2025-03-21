@@ -1,10 +1,17 @@
-export default function LoginModal() {
-    return (
-        <dialog open>
-            로그인데스
-            <form method="dialog">
-                <button>닫기</button>
-            </form>
-        </dialog>
-    )
-}
+import { forwardRef } from "react";
+import ReactDOM from "react-dom";
+
+// eslint-disable-next-line react/display-name,react/prop-types
+const Modal = forwardRef(({ children }, ref) => {
+    return ReactDOM.createPortal(
+        <dialog ref={ref} className="modal-login">
+            <div className="modal-login-content">
+                {children}
+                <button onClick={() => ref.current.close()}>닫기</button>
+            </div>
+        </dialog>,
+        document.getElementById("modal-root")
+    );
+});
+
+export default Modal;

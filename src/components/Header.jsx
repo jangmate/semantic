@@ -1,14 +1,22 @@
 import {Link} from "react-router-dom";
-import LoginModal from "./LoginModal.jsx";
+import {useRef, useState} from "react";
+import Modal from "./LoginModal.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Header () {
+    const modalRef = useRef(null);
+    const [headerOpen, setHeaderOpen] = useState(false);
+    const navigate = useNavigate();
+    const openModal = () => {
+        modalRef.current?.showModal();
+    };
     return (
-        <header>
+        <header className={headerOpen ? 'open' : ''}>
             <h1 className='h1'>
                 <Link to="/" aria-label='WAYBLE circlar' className='wayble_logo'></Link>
             </h1>
             <nav>
-                <ul>
+                <ul onMouseEnter={() => setHeaderOpen(true)} onMouseLeave={() => setHeaderOpen(false)}>
                     <li>
                         <Link to="/intro">서비스 소개</Link>
                     </li>
@@ -27,9 +35,18 @@ export default function Header () {
                 </ul>
             </nav>
             <aside className='aside'>
-                <button type='button' className='login btn_normal'>로그인</button>
+                <ul>
+                    <li>
+                        <button type="button" onClick={() => navigate("/")}>WAYBLE</button>
+                    </li>
+                    <li>
+                    <button type='button' onClick={openModal}>로그인</button>
+                    </li>
+                </ul>
             </aside>
-            <LoginModal />
+            <Modal ref={modalRef}>
+
+            </Modal>
         </header>
     )
 }
