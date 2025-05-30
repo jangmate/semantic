@@ -1,12 +1,10 @@
 import {Link} from "react-router-dom";
 import {useRef, useState} from "react";
-import Modal from "./LoginModal.jsx";
-import { useNavigate } from "react-router-dom";
+import LoginModal from "./LoginModal.jsx";
 
 export default function Header () {
     const modalRef = useRef(null);
     const [headerOpen, setHeaderOpen] = useState(false);
-    const navigate = useNavigate();
     const openModal = () => {
         modalRef.current?.showModal();
     };
@@ -36,17 +34,16 @@ export default function Header () {
             </nav>
             <aside className='aside'>
                 <ul>
-                    <li>
-                        <button type="button" onClick={() => navigate("/")}>WAYBLE</button>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <button type="button" onClick={() => navigate("/")}>WAYBLE</button>*/}
+                    {/*</li>*/}
                     <li>
                     <button type='button' onClick={openModal}>로그인</button>
                     </li>
                 </ul>
             </aside>
-            <Modal ref={modalRef}>
-
-            </Modal>
+            <LoginModal ref={modalRef}>
+            </LoginModal>
         </header>
     )
 }
