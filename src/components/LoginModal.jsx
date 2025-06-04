@@ -5,7 +5,8 @@ import {Link} from "react-router-dom";
 // eslint-disable-next-line react/display-name
 const LoginModal = forwardRef((props, ref) => {
     return ReactDOM.createPortal(
-        <dialog ref={ref} className="login-modal">
+        // eslint-disable-next-line react/no-unknown-property
+        <dialog ref={ref} className="login-modal" closedby={'any'}>
             <Link to="/" className='logo-sidemenu'>웨이블</Link>
             <form action="" method="POST">
                 <input type="email" id="email" name="email" placeholder="이메일 주소" required/>

@@ -1,45 +1,49 @@
 export default function Home () {
     return (
         <>
-            <section className={'full-hd-section'}>
-                <h2 className={'heading-wayble'}><span className={'blind'}>WAYBLE circular</span></h2>
-                <p>폐기물 · 자원순환 전 과정 관리 서비스</p>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="/">더 알아보기</a>
-                        </li>
-                        <li>
-                            <a href="/">무료이용 상담하기</a>
-                        </li>
-                    </ul>
-                </nav>
+            <section className={'full-hd-section bg-main-banner'}>
+                <div className={'inner-container'}>
+                    <h2 className={'heading-wayble'}><span className={'blind'}>WAYBLE circular</span></h2>
+                    <p>폐기물 · 자원순환 전 과정 관리 서비스</p>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/">더 알아보기</a>
+                            </li>
+                            <li>
+                                <a href="/">무료이용 상담하기</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </section>
             <section className={'full-hd-section'}>
-                <h2>혹시 이런 고민 하고 계신가요?</h2>
-                <ul className={'worry-list'}>
-                    <li>
-                        <figure>
-                            <img src={'/'} alt={""}/>
-                        </figure>
-                        <blockquote>“ <span>저렴하고 일정 대응이 빠른</span> 처리업체를 찾고 있어요 ”</blockquote>
-                        <p>- A 사업장 계약담당자 -</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src={'/'} alt={""}/>
-                        </figure>
-                        <blockquote>“ 예산 대비 <span>폐기물 처리 비용이</span> 많이 나와 고민이에요 “</blockquote>
-                        <p>- B본사 구매담당자 -</p>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src={'/'} alt={""}/>
-                        </figure>
-                        <blockquote>“ <span>과태료 걱정없이 믿고 맡길 수 있는</span> 폐기물 업체가 필요해요 ”</blockquote>
-                        <p>- C공장 환경담당자 -</p>
-                    </li>
-                </ul>
+                <div className={'inner-container'}>
+                    <h2>혹시 이런 고민 하고 계신가요?</h2>
+                    <ul className={'worry-list'}>
+                        <li>
+                            <figure>
+                                <img src={'/'} alt={""}/>
+                            </figure>
+                            <blockquote>“ <span>저렴하고 일정 대응이 빠른</span> 처리업체를 찾고 있어요 ”</blockquote>
+                            <p>- A 사업장 계약담당자 -</p>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src={'/'} alt={""}/>
+                            </figure>
+                            <blockquote>“ 예산 대비 <span>폐기물 처리 비용이</span> 많이 나와 고민이에요 “</blockquote>
+                            <p>- B본사 구매담당자 -</p>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src={'/'} alt={""}/>
+                            </figure>
+                            <blockquote>“ <span>과태료 걱정없이 믿고 맡길 수 있는</span> 폐기물 업체가 필요해요 ”</blockquote>
+                            <p>- C공장 환경담당자 -</p>
+                        </li>
+                    </ul>
+                </div>
             </section>
             <section className={'full-hd-section'}>
                 <h2>폐기물 · 자원순환 전 과정 관리 서비스</h2>

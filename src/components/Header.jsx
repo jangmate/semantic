@@ -38,7 +38,7 @@ export default function Header () {
                     {/*    <button type="button" onClick={() => navigate("/")}>WAYBLE</button>*/}
                     {/*</li>*/}
                     <li>
-                    <button type='button' onClick={openModal}>로그인</button>
+                       <button type='button' onClick={openModal}>로그인</button>
                     </li>
                 </ul>
             </aside>
