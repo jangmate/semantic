@@ -13,7 +13,7 @@ export default function Header () {
             <h1 className='h1'>
                 <Link to="/" aria-label='WAYBLE circlar' className='wayble_logo'></Link>
             </h1>
-            <nav>
+            <nav className={'gnb'}>
                 <ul onMouseEnter={() => setHeaderOpen(true)} onMouseLeave={() => setHeaderOpen(false)}>
                     <li>
                         <Link to="/intro">서비스 소개</Link>
@@ -32,7 +32,7 @@ export default function Header () {
                     </li>
                 </ul>
             </nav>
-            <aside className='aside'>
+            <div>
                 <ul>
                     {/*<li>*/}
                     {/*    <button type="button" onClick={() => navigate("/")}>WAYBLE</button>*/}
@@ -41,7 +41,7 @@ export default function Header () {
                        <button type='button' onClick={openModal}>로그인</button>
                     </li>
                 </ul>
-            </aside>
+            </div>
             <LoginModal ref={modalRef}>
             </LoginModal>
         </header>

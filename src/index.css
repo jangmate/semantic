@@ -227,5 +227,12 @@ footer section.relation select {
     background-position: center;
 }
 .heading-wayble {
-
+    width: 800px;
+    height: 85px;
+    background-image: url("/images/main-banner-heading.png");
+    background-size: cover;
+    background-position: center;
+}
+.heading-wayble + p {
+    font-size: 36px;
 }
