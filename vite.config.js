@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/semantic/',  // 여기 중요!
+  base: '/',  // 여기 중요!
 })
