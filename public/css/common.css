@@ -29,3 +29,59 @@
 .void {
     height: 2000px;
 }
+.btn {
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    color: #fff;
+    padding: 0 20px;
+    border-radius: 500px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.btn-primary {
+    background: #00A0D2;
+}
+.btn-primary.large {
+    min-width: 280px;
+}
+.btn-secondary {
+    background: #2F9399;
+}
+.btn-secondary:hover {
+
+}
+.btn-secondary:focus {
+
+}
+.btn-transparent {
+    background: transparent;
+    border: 1px solid #fff;
+    min-width: 200px;
+}
+.heading-50p {
+    font-size: 50px;
+    text-align: center;
+}
+.color-primary {
+    color: #00A0D2;
+}
+.img-container > img {
+    display: block;
+    max-width: 100%;
+}
+.primary-mark {
+    background: transparent;
+    position: relative;
+}
+.primary-mark {
+    background: linear-gradient(to top, transparent 12%, #83D9F4 12%, #83D9F4 54%, transparent 54%);
+    /* 배경을 아래 절반에만 노출 */
+}
+.headline-emphasis {
+    font-size: 50px;
+    font-weight: 600;
+}

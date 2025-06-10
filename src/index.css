@@ -11,6 +11,8 @@ header {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #d9d9d9;
+    background: #fff;
+    z-index: 1;
 }
 header h1 {
     position: absolute;
@@ -20,7 +22,7 @@ header h1 {
 }
 header h1 a {
     display: block;
-    background-image: url(/public/images/logo-wayble.svg);
+    background-image: url(/images/logo-wayble.svg);
     width: 205px;
     height: 32px;
     background-size: cover;
@@ -97,7 +99,7 @@ aside button::after {
     background-position: center;
     width: 21px;
     height: 20px;
-    background-image: url(/public/images/icon-arrow.svg);
+    background-image: url(/images/icon-arrow.svg);
     background-size: 21px 20px;
     margin-left: 8px;
 }
@@ -148,24 +150,24 @@ footer section.relation > nav > ul > li > a {
 footer section.relation > nav > ul > li:nth-of-type(1) > a {
     width: 36px;
     height: 30px;
-    background-image: url(/public/images/icon-blog.svg);
+    background-image: url(/images/icon-blog.svg);
 }
 footer section.relation > nav > ul > li:nth-of-type(2) > a {
     width: 30px;
     height: 30px;
-    background-image: url(/public/images/icon-insta.svg);
+    background-image: url(/images/icon-insta.svg);
 }
 footer section.relation > nav > ul > li:nth-of-type(3) > a {
     width: 32px;
     height: 30px;
-    background-image: url(/public/images/icon-talk.svg);
+    background-image: url(/images/icon-talk.svg);
 }
 footer section.relation > nav > a {
     text-align: right;
     font-weight: 700;
     padding: 19px 88px 19px 0;
     line-height: 26px;
-    background-image: url("/public/images/CES2023.png");
+    background-image: url("/images/CES2023.png");
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -182,7 +184,7 @@ footer section.relation select {
     -webkit-appearance: none; /* 크롬, 사파리 */
     -moz-appearance: none; /* 파이어폭스 */
     border-radius: 500px;
-    background-image: url("/public/images/arrow-drop-down.svg");
+    background-image: url("/images/arrow-drop-down.svg");
     background-repeat: no-repeat;
     background-size: 8px 4px;
     background-position: right 20px center;
@@ -229,10 +231,119 @@ footer section.relation select {
 .heading-wayble {
     width: 800px;
     height: 85px;
-    background-image: url("/images/main-banner-heading.png");
+    background-image: url("/images/main-banner-heading.svg");
     background-size: cover;
     background-position: center;
 }
 .heading-wayble + p {
     font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    margin: 40px 0 0 0;
+}
+.main-nav-wrapper {
+    margin: 40px 0 0 0;
+}
+.main-nav-wrapper > ul {
+    display: flex;
+    gap: 30px;
+}
+.main-slider-pagination {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 0 0;
+}
+.main-slider-pagination > p {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+
+}
+.main-slider-pagination .prev {
+    width: 40px;
+    height: 40px;
+    background: url(/images/icon-prev.svg) no-repeat center;
+}
+.main-slider-pagination .next {
+    width: 40px;
+    height: 40px;
+    background: url(/images/icon-next.svg) no-repeat center;
+}
+.main-slider-pagination .stop {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 10px;
+    background: url(/images/icon-stop.svg) no-repeat center;
+}
+.main-worry-list {
+    display: flex;
+    gap: 40px;
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+.main-worry-list > li {
+    flex: 1;
+}
+.main-worry-list > li > blockquote {
+    max-width: 98%;
+    margin: 40px 0 30px 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.main-worry-list > li > p {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+.main-waste-management-title {
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1;
+}
+.main-waste-management-title + p {
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px 0 0 0;
+    line-height: 1;
+}
+.headline-emphasis {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+}
+.headline-emphasis + p {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px 0 60px 0;
+    line-height: 1;
+}
+.main-management-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.main-management-list > li {
+    min-height: 330px;
+    padding: 30px;
+    background: #F9FDFF;
+    border: 1px solid #BFD1E5;
+    border-radius: 20px;
+}
+.main-management-list > li > h3 {
+    font-size: 32px;
+}
+.main-management-list > li > p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 20px 0 0 0;
+}
+.main-management-list > li.tonghab {
+    background-image: url("/images/main-zero-waste-1.png");
+    background-repeat: no-repeat;
+    background-position: right;
 }

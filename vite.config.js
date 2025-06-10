@@ -1,8 +1,8 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: mode === 'production' ? '/semantic/' : '/', // dev 모드에서는 /
+  base: mode === 'production' ? '/semantic/' : '/',
+
 }))

@@ -5,83 +5,97 @@ export default function Home () {
                 <section className={'inner-container'}>
                     <h2 className={'heading-wayble'}><span className={'blind'}>WAYBLE circular</span></h2>
                     <p>폐기물 · 자원순환 전 과정 관리 서비스</p>
-                    <nav>
+                    <nav className={'main-nav-wrapper'}>
                         <ul>
                             <li>
-                                <a href="/">더 알아보기</a>
+                                <a href="/" className={'btn btn-transparent'}>더 알아보기</a>
                             </li>
                             <li>
-                                <a href="/">무료이용 상담하기</a>
+                                <a href="/" className={'btn btn-primary large'}>무료이용 상담하기</a>
                             </li>
                         </ul>
                     </nav>
+                    <div className={'main-slider-pagination'}>
+                        <button className={'prev'} onClick={() => {}}><span className={'blind'}>prev</span></button>
+                        <p><strong>01</strong> / 03</p>
+                        <button className={'next'} onClick={() => {}}><span className={'blind'}>next</span></button>
+                        <button className={'stop'} onClick={() => {}}><span className={'blind'}>stop</span></button>
+                    </div>
                 </section>
             </div>
+
             <div className={'full-hd-section'}>
                 <section className={'inner-container'}>
-                    <h2>혹시 이런 고민 하고 계신가요?</h2>
-                    <ul className={'worry-list'}>
+                    <h2 className={'heading-50p'}>혹시 이런 고민 하고 계신가요?</h2>
+                    <ul className={'main-worry-list'}>
                         <li>
                             <div className={'img-container'}>
-                                <img src={'/'} alt={""}/>
+                                <img src={'/images/main-worry-1.jpg'} alt={""}/>
                             </div>
-                            <blockquote>“ <span>저렴하고 일정 대응이 빠른</span> 처리업체를 찾고 있어요 ”</blockquote>
+                            <blockquote>“ <span className={'color-primary'}>저렴하고 일정 대응이 빠른</span> 처리업체를 찾고 있어요 ”</blockquote>
                             <p>- A 사업장 계약담당자 -</p>
                         </li>
                         <li>
                             <div className={'img-container'}>
-                                <img src={'/'} alt={""}/>
+                                <img src={'/images/main-worry-2.jpg'} alt={""}/>
                             </div>
-                            <blockquote>“ 예산 대비 <span>폐기물 처리 비용이</span> 많이 나와 고민이에요 “</blockquote>
+                            <blockquote>“ 예산 대비 <span className={'color-primary'}>폐기물 처리 비용이</span> 많이 나와 고민이에요 “</blockquote>
                             <p>- B본사 구매담당자 -</p>
                         </li>
                         <li>
                             <div className={'img-container'}>
-                                <img src={'/'} alt={""}/>
+                                <img src={'/images/main-worry-3.jpg'} alt={""}/>
                             </div>
-                            <blockquote>“ <span>과태료 걱정없이 믿고 맡길 수 있는</span> 폐기물 업체가 필요해요 ”</blockquote>
+                            <blockquote>“ <span className={'color-primary'}>과태료 걱정없이 믿고 맡길 수 있는</span> 폐기물 업체가 필요해요 ”</blockquote>
                             <p>- C공장 환경담당자 -</p>
                         </li>
                     </ul>
                 </section>
             </div>
+
             <div className={'full-hd-section'}>
                 <section className={'inner-container'}>
-                    <h2>폐기물 · 자원순환 전 과정 관리 서비스</h2>
-                    <p className={'trust-me middle-underline'}><mark>웨이블 서큘러에 맡겨주세요</mark></p>
+                    <h2 className={'main-waste-management-title'}>폐기물 · 자원순환 전 과정 관리 서비스</h2>
+                    <p className={'trust-me middle-underline'}><mark className={'primary-mark'}>웨이블 서큘러에 맡겨주세요</mark></p>
                 </section>
             </div>
+
             <div className={'full-hd-section'}>
                 <section className={'inner-container'}>
-                    <h2><b>웨이블 서큘러는</b> <br /> 폐기물/순환자원의 전사적 관리 체계를 구축하여, Zero Waste 달성을 지원합니다.</h2>
-                    <ul>
+                    <h2 className={'headline-emphasis'}>웨이블 서큘러는</h2>
+                    <p>폐기물/순환자원의 전사적 관리 체계를 구축하여, <strong className={'color-primary'}>Zero Waste 달성</strong>을 지원합니다.</p>
+                    <ul className={'main-management-list'}>
                         <li>
-                            <h3><mark>통합관리 지원</mark></h3>
-                            <p>믿을 수 있는 처리업체 선정부터 정산까지 원스탑 서비스 제공</p>
+                            <h3><mark className={'primary-mark'}>통합관리 지원</mark></h3>
+                            <p>믿을 수 있는 처리업체 선정부터<br /> 정산까지 원스탑 서비스 제공</p>
                         </li>
                         <li>
-                            <h3><mark>디지털 기반 업무</mark></h3>
+                            <h3><mark className={'primary-mark'}>디지털 기반 업무</mark></h3>
                             <p>간편한 배출 신청 및 올바로 인계서 등 필수 서류 자동화 기능 제공</p>
                         </li>
                         <li>
-                            <h3><mark>자원순환 전 과정 관리</mark></h3>
+                            <h3><mark className={'primary-mark'}>자원순환 전 과정 관리</mark></h3>
                             <p>폐기물의 재활용/자원화 전 과정 인증 지원 및 관리</p>
                         </li>
+                    </ul>
+                    <hr />
+                    <ul className={'main-management-list'}>
                         <li>
-                            <h3><mark>비용 최적화</mark></h3>
+                            <h3><mark className={'primary-mark'}>비용 최적화</mark></h3>
                             <p>고객사별 배출 품목 및 현황에 적합한 업체 선정</p>
                         </li>
                         <li>
-                            <h3><mark>손쉬운 데이터 관리</mark></h3>
+                            <h3><mark className={'primary-mark'}>손쉬운 데이터 관리</mark></h3>
                             <p>전국 사업장 폐기물 데이터 통합 대시보드 제공</p>
                         </li>
                         <li>
-                            <h3><mark>ESG 경영 지원</mark></h3>
+                            <h3><mark className={'primary-mark'}>ESG 경영 지원</mark></h3>
                             <p>환경지표 관리 및 UL ZWTL 인증지원</p>
                         </li>
                     </ul>
                 </section>
             </div>
+
             <div className={'full-hd-section'}>
                 <section className={'inner-container'}>
                     <h2 className="blind">서비스 목록</h2>
@@ -96,7 +110,7 @@ export default function Home () {
                             <button type={'button'} title={''}>폐기물 통합 관리</button>
                         </li>
                     </ul>
-                    <article>
+                    <section>
                         <h3>폐기물 디지털 관리</h3>
                         <ul>
                             <li>스마트 배출신청부터 올바로 인계서 자동전송까지, 반복적인 관리업무의 자동화 디지털화</li>
@@ -105,7 +119,7 @@ export default function Home () {
                         <nav>
                             <a href={'/'}>VIEW MORE</a>
                         </nav>
-                    </article>
+                    </section>
                 </section>
             </div>
             <div className={'full-hd-section'}>
