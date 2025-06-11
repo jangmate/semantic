@@ -85,3 +85,12 @@
     font-size: 50px;
     font-weight: 600;
 }
+.fit-container {
+    max-width: fit-content;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-left {
+    text-align: left !important;
+}
