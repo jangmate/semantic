@@ -6,7 +6,7 @@ export default function Footer () {
             <div className='container flex-center'>
                 <section className='info'>
                     <Link to="/" className="footer-logo">
-                        <img src="/images/logo-footer.svg" alt="WAYBLE circular"/>
+                        <img src="./images/logo-footer.svg" alt="WAYBLE circular"/>
                     </Link>
                     <nav>
                         <a href='#'>이용약관</a>
