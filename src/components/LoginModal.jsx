@@ -32,17 +32,17 @@ const LoginModal = forwardRef((props, ref) => {
                         state === "leaving" ? "hide" : ""
             }`}
         >
-            <Link to="/" className="logo-sidemenu">웨이블</Link>
-            <form method="POST">
-                <input type="email" name="email" placeholder="이메일 주소" required />
-                <input type="password" name="password" placeholder="비밀번호" required />
-                <div>
-                    <input type="checkbox" id="remember" name="remember" />
-                    <label htmlFor="remember">아이디 저장</label>
+            <Link to="/" className="logo-sidemenu"><span className={'blind'}>웨이블</span></Link>
+            <form method="POST" className={`login-form`}>
+                <input type="email" className={'email-input'} name="email" placeholder="이메일 주소" required />
+                <input type="password" className={'password-input'} name="password" placeholder="비밀번호" required />
+                <div className={'remember-wrap'}>
+                    <input type="checkbox" id="remember" name="remember" className={'remember-checkbox'} />
+                    <label htmlFor="remember" className={'remember-label'}>아이디 저장</label>
                 </div>
-                <input type="submit" value="로그인" className="login-button" />
+                <button type="submit" value="로그인" className="login-button">로그인</button>
             </form>
-            <button onClick={() => ref.current?.close()} className="close">닫기</button>
+            <button onClick={() => ref.current?.close()} className="close-button"><span className={'blind'}>닫기</span></button>
         </dialog>,
         document.getElementById("modal-root")
     );

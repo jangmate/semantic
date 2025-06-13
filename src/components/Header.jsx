@@ -1,15 +1,33 @@
 import {Link} from "react-router-dom";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
+
 import LoginModal from "./LoginModal.jsx";
 
 export default function Header () {
     const modalRef = useRef(null);
     const [headerOpen, setHeaderOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const openModal = () => {
         modalRef.current?.showModal();
     };
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            setIsScrolled(scrollTop > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // 초기 체크
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className={headerOpen ? 'open' : ''}>
+        <header className={`${headerOpen ? 'open' : ''} ${isScrolled ? 'active' : ''}`}>
             <h1 className='h1'>
                 <Link to="/" aria-label='WAYBLE circlar' className='wayble_logo'></Link>
             </h1>
@@ -32,13 +50,13 @@ export default function Header () {
                     </li>
                 </ul>
             </nav>
-            <div>
+            <div className={'util'}>
                 <ul>
                     {/*<li>*/}
                     {/*    <button type="button" onClick={() => navigate("/")}>WAYBLE</button>*/}
                     {/*</li>*/}
                     <li>
-                       <button type='button' className={'btn btn-secondary'} onClick={openModal}>로그인</button>
+                       <button type='button' className={'btn-primary login'} onClick={openModal}>로그인<span className={'icon-arrow'}></span></button>
                     </li>
                 </ul>
             </div>

@@ -2,6 +2,10 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 body {
+
+}
+body:has(dialog[open]) {
+    overflow: hidden;
 }
 header {
     height: 90px;
@@ -10,9 +14,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #d9d9d9;
-    background: #fff;
+    background: transparent;
+    color: #FFF;
     z-index: 1;
+    transition: 0.4s;
+}
+header.active {
+    background: #FFF;
+    color: #222;
+    border-bottom: 1px solid #d9d9d9;
+}
+header.active h1 a {
+    background-image: url("/images/logo-wayble.svg");
 }
 header h1 {
     position: absolute;
@@ -22,7 +35,7 @@ header h1 {
 }
 header h1 a {
     display: block;
-    background-image: url(/images/logo-wayble.svg);
+    background-image: url(/images/logo-footer.svg);
     width: 205px;
     height: 32px;
     background-size: cover;
@@ -45,7 +58,6 @@ header > nav > ul > li {
     font-weight: 600;
 }
 header > nav > ul > li > a {
-    color: #222;
 }
 header > nav > ul > li > a:hover {
     color: #00a5d2;
@@ -61,6 +73,19 @@ header aside > ul {
 }
 header aside dialog {
     z-index: 1;
+}
+.util {
+    position: absolute;
+    right: 50px;
+}
+.icon-arrow {
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    background-image: url("/images/btn_login_after.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 aside button {
     font-family: inherit;
@@ -107,62 +132,62 @@ footer {
     background: #222;
     color: #fff;
 }
-footer section.info {
+footer .info {
     margin: 15px 0 0 0;
 }
-footer section.info > a {
+footer .info > a {
 }
-footer section.info > nav {
+footer .info > nav > ul {
     margin: 28px 0 0 0;
     display: flex;
     gap: 20px;
 }
-footer section.info .wrap-address {
+footer .info address {
     display: flex;
     justify-content: space-between;
     margin: 33px 0 0 0;
     font-size: 14px;
 }
-footer section.info address {
+footer .info address {
     font-style: normal;
 }
-footer section.info .tel {
+footer .info .tel {
 }
-footer section.info .copyright {
+footer .info .copyright {
     font-size: 14px;
     margin: 10px 0 0 0;
     text-transform: uppercase;
     font-weight: 400;
   }
-footer section.relation > nav {
+footer .relation > nav {
     display: flex;
     gap: 60px;
     align-items: center;
 }
-footer section.relation > nav > ul {
+footer .relation > nav > ul {
     display: flex;
     gap: 35px;
     align-items: center;
 }
-footer section.relation > nav > ul > li > a {
+footer .relation > nav > ul > li > a {
     display: block;
 }
-footer section.relation > nav > ul > li:nth-of-type(1) > a {
+footer .relation > nav > ul > li:nth-of-type(1) > a {
     width: 36px;
     height: 30px;
     background-image: url(/images/icon-blog.svg);
 }
-footer section.relation > nav > ul > li:nth-of-type(2) > a {
+footer .relation > nav > ul > li:nth-of-type(2) > a {
     width: 30px;
     height: 30px;
     background-image: url(/images/icon-insta.svg);
 }
-footer section.relation > nav > ul > li:nth-of-type(3) > a {
+footer .relation > nav > ul > li:nth-of-type(3) > a {
     width: 32px;
     height: 30px;
     background-image: url(/images/icon-talk.svg);
 }
-footer section.relation > nav > a {
+footer .relation > nav .ces {
     text-align: right;
     font-weight: 700;
     padding: 19px 88px 19px 0;
@@ -171,7 +196,7 @@ footer section.relation > nav > a {
     background-repeat: no-repeat;
     background-position: right;
 }
-footer section.relation select {
+footer .relation select {
     width: 160px;
     height: 30px;
     padding: 0 0 0 20px;
@@ -240,7 +265,7 @@ footer section.relation select {
     justify-content: center;
 }
 .bg-main-banner {
-    background-image: url(/images/main-bg-1.jpg);
+    background-image: url("/images/main-bg-1.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -359,12 +384,38 @@ footer section.relation select {
     margin: 20px 0 0 0;
 }
 .main-management-list > li.tonghab {
-    background-image: url("/images/main-zero-waste-1.png");
+    background: url("/images/main-zero-waste-1.png");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 85% 80%;
 }
+.main-management-list > li.digital {
+    background: url("/images/main-zero-waste-2.png");
+    background-repeat: no-repeat;
+    background-position: 85% 80%;
+}
+.main-management-list > li.resource {
+    background: url("/images/main-zero-waste-3.png");
+    background-repeat: no-repeat;
+    background-position: 85% 80%;
+}
+.main-management-list > li.cost {
+    background: url("/images/main-zero-waste-4.png");
+    background-repeat: no-repeat;
+    background-position: 85% 80%;
+}
+.main-management-list > li.easy {
+    background: url("/images/main-zero-waste-5.png");
+    background-repeat: no-repeat;
+    background-position: 85% 80%;
+}
+.main-management-list > li.esg {
+    background: url("/images/main-zero-waste-6.png");
+    background-repeat: no-repeat;
+    background-position: 85% 80%;
+}
+
 .bg-main-service {
-    background-image: url(/images/bg-logo-wayble.svg);
+    background-image: url("/images/bg-logo-wayble.svg");
     background-color: #F9F9F9;
     background-position: left;
     background-repeat: no-repeat;
@@ -412,7 +463,7 @@ footer section.relation select {
     font-size: 16px;
     min-width: 170px;
 }
-.trusted-by-section {
+.trusted-by-section > div {
     min-height: 484px;
     display: flex;
     flex-direction: column;
@@ -469,4 +520,131 @@ footer section.relation select {
 }
 .download-section nav > ul > li:nth-of-type(1) a {
     min-width: 280px;
+}
+.login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    z-index: 99;
+    border-radius: 50px;
+    color: #fff;
+    padding: 8px 20px;
+}
+.logo-sidemenu {
+    display: block;
+    background-image: url("/images/logo-wayble.svg");
+    background-repeat: no-repeat;
+    width: 205px;
+    height: 32px;
+}
+.email-input {
+    height: auto;
+    font-size: 16px;
+    color: #555;
+    padding: 15px 20px;
+    background: #F5F5F5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    margin: 0 0 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+.password-input {
+    height: auto;
+    font-size: 16px;
+    color: #555;
+    padding: 15px 20px;
+    background: #F5F5F5;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+    font-family: 'Pretendard';
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-form {
+    margin: 60px 0 20px 0;
+}
+.remember-wrap {
+    margin: 0 0 20px 0;
+}
+.remember-checkbox {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: 0;
+}
+.remember-label {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    padding-left: 25px;
+}
+.login-button {
+    width: 100%;
+    background: #34A0D1;
+    color: #fff;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-family: 'Pretendard';
+}
+.close-button {
+    background-image: url('/images/login_close.png');
+    width: 32px;
+    height: 32px;
+    background-size: 24px 25px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 100%;
+    background-position: center;
+}
+.sub-visual {
+    background-image: url("/images/bg-sub-visual.jpg");
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    flex-direction: column;
+}
+.sub-visual h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+}
+.sub-visual address {
+    margin: 20px 0 0 0;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    gap: 40px;
 }

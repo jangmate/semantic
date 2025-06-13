@@ -65,30 +65,30 @@ export default function Home () {
                     <h2 className={'headline-emphasis'}>웨이블 서큘러는</h2>
                     <p>폐기물/순환자원의 전사적 관리 체계를 구축하여, <strong className={'color-primary'}>Zero Waste 달성</strong>을 지원합니다.</p>
                     <ul className={'main-management-list'}>
-                        <li>
+                        <li className={'tonghab'}>
                             <h3><mark className={'primary-mark'}>통합관리 지원</mark></h3>
                             <p>믿을 수 있는 처리업체 선정부터<br /> 정산까지 원스탑 서비스 제공</p>
                         </li>
-                        <li>
+                        <li className={'digital'}>
                             <h3><mark className={'primary-mark'}>디지털 기반 업무</mark></h3>
                             <p>간편한 배출 신청 및 올바로 인계서 등 필수 서류 자동화 기능 제공</p>
                         </li>
-                        <li>
+                        <li className={'resource'}>
                             <h3><mark className={'primary-mark'}>자원순환 전 과정 관리</mark></h3>
                             <p>폐기물의 재활용/자원화 전 과정 인증 지원 및 관리</p>
                         </li>
                     </ul>
                     <hr />
                     <ul className={'main-management-list'}>
-                        <li>
+                        <li className={'cost'}>
                             <h3><mark className={'primary-mark'}>비용 최적화</mark></h3>
                             <p>고객사별 배출 품목 및 현황에 적합한 업체 선정</p>
                         </li>
-                        <li>
+                        <li className={'easy'}>
                             <h3><mark className={'primary-mark'}>손쉬운 데이터 관리</mark></h3>
                             <p>전국 사업장 폐기물 데이터 통합 대시보드 제공</p>
                         </li>
-                        <li>
+                        <li className={'esg'}>
                             <h3><mark className={'primary-mark'}>ESG 경영 지원</mark></h3>
                             <p>환경지표 관리 및 UL ZWTL 인증지원</p>
                         </li>
@@ -130,8 +130,8 @@ export default function Home () {
                     </div>
                 </div>
             </section>
-            <section className={''}>
-                <div className={'trusted-by-section'}>
+            <section className={'trusted-by-section'}>
+                <div>
                     <h2 className={'text-center'}>TRUSTED BY</h2>
                     <ul className={'trusted-company-list'}>
                         <li><img src={'./images/main-logo-microsoft.png'} alt={'microsoft'} /> </li>

@@ -4,8 +4,8 @@ export default function Support () {
             <section className={'sub-visual'}>
                 <h2>고객지원</h2>
                 <address>
-                    <p>TEL 02-3700-9156 - 8</p>
-                    <p>E-mail circular@wayble.eco</p>
+                    <p><strong>TEL</strong> 02-3700-9156 - 8</p>
+                    <p><strong>E-mail</strong> circular@wayble.eco</p>
                 </address>
             </section>
             <main>
